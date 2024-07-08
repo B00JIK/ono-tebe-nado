@@ -1,24 +1,21 @@
 
-
 .header {
-    height: 293px;
+    height: 312px;
     width: 1100px;
-    padding: 92px 50px 96px;
+    padding: 110px 50px 96px;
     display: grid;
-    grid-template-columns: 391px 148px 240px;
+    grid-template-columns: 391px 130px 240px;
     grid-template-rows: 105px;
-    /* gap: 36px; */
 }
 
 .header__menu {
-    display: grid;
     align-self: center;
 }
 
 .header__links-list {
     display: flex;
     list-style-image: url(/images/list_marker.svg);
-    gap: 31px;
+    gap: 33px;
     font-family: "Raleway", sans-serif;
     font-size: 18px;
     font-weight: 400;
@@ -56,27 +53,32 @@
     font-size: 18px;
     font-weight: 400;
     align-self: center;
+    line-height: 1.34;
 }
 
 .cover {
     padding: 165px 50px 237px;
     height: 757px;
     width: 1100px;
+    position: relative;
+    z-index: 1;
 }
 
 .cover__img {
     position: relative;
-    z-index: 0;
+    z-index: 1;
     height: 757px;
     width: 1100px;
     background-size: cover;
     background-image: url(/images/cover.jpg);
 }
 
-.overlay{
-    /* position: absolute;
-    z-index: 1; */
+.overlay {
+    position: absolute;
+    z-index: 0;
     background-color: rgb(0, 0, 0, 0.6);
+    height: 100%;
+    width: 100%;
 }
 
 .cover__title {
@@ -86,7 +88,10 @@
     line-height: 1.15;
     color: #FFF;
     text-transform: uppercase;
+    display: block;
+    letter-spacing: 30px;
 }
+
 
 .aligned-text {
     text-align: left;
@@ -94,24 +99,28 @@
 
 .aligned-text_center {
     text-align: center;
+    letter-spacing: 37x;
+    line-height: 135px;
+    padding-right: 29px;
 }
 
 .aligned-text_right {
     text-align: right;
+    letter-spacing: 30px;
 }
 
 .no-letter-spacing {
-    letter-spacing: 0px;
+    letter-spacing: 0;
 }
 
 .letter-spacing-extended {
-    letter-spacing: 50px;
+    letter-spacing: 60px;
 }
 
 .cover__description {
     display: flex;
     justify-content: space-between;
-    padding-top: 147px;
+    padding-top: 127px;
 }
 
 .cover__description-text {
@@ -123,7 +132,11 @@
     line-height: 28px;
     color: #FFF;
     text-transform: uppercase;
-    word-spacing: 20px;
+    word-spacing: 19px;
+}
+
+.cover__descriptin-text-wide {
+    word-spacing: 16px;
 }
 
 .bet-button {
@@ -137,10 +150,15 @@
     height: 51px;
     width: 256px;
     background-color: transparent;
+    position: relative;
+    z-index: 1;
 }
 
 .lots {
     padding: 179px 24px 146px;
+    width: 1100px;
+    display: flex;
+    flex-direction: column;
 }
 
 .lots__heading {
@@ -148,46 +166,55 @@
     font-size: 40px;
     text-transform: uppercase;
     font-weight: 700;
-    padding: 0 173px 27px 40px ;
+    padding: 0 173px 27px 40px;
 }
 
-.lots__card-list {
-    display: grid;
-    grid-template-columns: repeat(3, 334px);
-    grid-template-rows: 563px;
+.card__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: 25px;
     list-style: none;
 }
 
-.lots__card-list-item {
+
+.card {
+    height: 563px;
+    width: 334px;
+}
+
+.card-link {
     display: block;
-    text-decoration-color: #FFF;
     text-decoration: none;
-    padding: 51px 40px 48px;
 }
 
 .card_type_film {
-    background-image: url(/images/card-lot-01.jpg);
+    background-image: url(/images/card-lot-01.jpg); 
     background-size: cover;
-    height: 563px;
-    width: 334px;
     background-position: center;
 }
 
 .card_type_book {
-    background-image: url(/images/card-lot-02.jpg);
+    background-image: url(/images/card-lot-02.jpg); 
     background-size: cover;
-    height: 563px;
-    width: 334px;
     background-position: center;
 }
 
 .card_type_picture {
-    background-image: url(/images/card-lot-03.jpg);
+    background-image: url(/images/card-lot-03.jpg); 
     background-size: cover;
+    background-position: center;
+}
+
+.lots__card-text-position {
+    padding: 51px 40px 48px;
+    display: flex;
+    height: 100%;
+    color:#FFF;
+    flex-direction: column;
+    justify-content: space-between;
     height: 563px;
     width: 334px;
-    background-position: center;
 }
 
 .card__title {
@@ -196,7 +223,10 @@
     text-transform: uppercase;
     color: #FFF;
     font-weight: 700;
+    line-height: 26.4px;
     text-decoration: underline;
+    position: relative;
+    z-index: 1;
 }
 
 .card__text {
@@ -204,5 +234,96 @@
     font-size: 20px;
     color: #FFF;
     font-weight: 400;
-    line-height: 26px;
+    line-height: 24px;
+    position: relative;
+    z-index: 1;
 }
+
+.lots__look-more-link {
+    display: block;
+    padding: 30px 844px 0 40px;
+    font-family: "Raleway", sans-serif;
+    font-size: 20px;
+    white-space: nowrap;
+}
+
+.about {
+    display: grid;
+    grid-template-columns: repeat(3, 382px);
+    grid-template-rows: 279px 1fr;
+    justify-items: center;
+    align-items: end;
+    padding-right: 24px;
+}
+
+.about__logo {
+    width: 148px;
+    height: 114px;
+}
+
+.about__logo-image {
+    background-color: black;
+    border-radius: 50%;
+    width: 240px;
+    height: 240px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+.about__title {
+    font-family: "Raleway", sans-serif;
+    font-size: 40px;
+    color: #000;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 138px 448px 95px 359px;
+    white-space: nowrap;
+}
+
+.about__text {
+    font-family: "Raleway", sans-serif;
+    font-size: 20px;
+    color: #000;
+    font-weight: 400;
+    grid-column-start: 2;
+    grid-column-end: 4;   
+    align-self: start;
+    line-height: 1.32;
+    padding-right: 65px;
+    padding-top: 8px;
+}
+
+footer {
+    padding: 167px 50px 88px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__menu {
+    flex-direction: column;
+    list-style: none;
+    text-align: center;
+    font-family: "Raleway", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.footer__social-list {
+    display: flex;
+    flex-direction: row;
+    gap: 48px;
+}
+
+.footer__social-list-item {
+    display: block;
+    height: 48px;
+    width: 48px;
+}
+
+.footer__social-icon {
+    display: block;
+    height: 48px;
+    width: 48px;
+}
+

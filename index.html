@@ -35,54 +35,113 @@
     </header>
     <main>
       <header class="cover__img">
-        <div class="overlay cover">
-          <h1 class="cover__title aligned-text">оно</h1>
-          <h1 class="cover__title aligned-text_center">тебе</h1>
-          <h1 class="cover__title aligned-text_right">надо</h1>
+        <div class="overlay"></div>
+        <div class="cover">
+          <h1 class="cover__title aligned-text">о<span class="letter-spacing-extended">н</span>о</h1>
+          <h1 class="cover__title aligned-text_center">те<span class="letter-spacing-extended">б</span>е</h1>
+          <h1 class="cover__title aligned-text_right"><span class="letter-spacing-extended">н</span>ад<span class="no-letter-spacing">о</span></h1>
           <div class="cover__description">
-            <p class="cover__description-text">Аукцион вещей, вкоторые никто не верил</p> 
+            <p class="cover__description-text">Аукцион вещей, в <span class="cover__descriptin-text-wide">которые никто</span> не верил</p> 
             <button class="bet-button">Сделать ставку</button>
           </div>
         </div>
       </header>
       <article class="lots">
         <h1 class="lots__heading">Лоты</h1>
-        <ul class="lots__card-list">
-          <li class="overlay">
-            <a href="#0" class="card_type_film lots__card-list-item">
-              <h2 class="card__title">Фильм режиссёра, который бросил киношколу</h2>
-              <p class="card__text">Не просто бросил, а ушёл с первой лекции. 
-                Какой была бы ваша ставка, если бы вы не знали, что режиссёр — Пол Томас Андерсон?
-              </p>
+        <ul class="card__list">       
+          <li>
+            <a href="#0" class="card-link">
+              <article class="card card_type_film">
+                <div class="overlay card"></div>
+                <div class="lots__card-text-position">
+                  <h2 class="card__title">Фильм режиссёра, который бросил киношколу</h2>
+                  <p class="card__text">Не просто бросил, а ушёл с первой лекции. 
+                    Какой была бы ваша ставка, если бы вы не знали, что режиссёр — Пол Томас Андерсон?
+                  </p>
+                </div>
+              </article>
             </a>
           </li>
-          <li class="overlay">
-            <a href="#0" class="card_type_book lots__card-list-item overlay">
-              <h2 class="card__title">Фильм режиссёра, который бросил киношколу</h2>
-              <p class="card__text">Объёмом почти в тысячу страниц. Иногда без знаков препинания и с переходами на древнеанглийский. 
-                В ней одновременно рассказывается о 16 июня 1904 года и об истории литературы, начиная с античных времён. 
-                И это всё накладывается на эпическую поэму Гомера. Сколько бы вы поставили на «Улисса» Джеймса Джойса?
-              </p>
-            </a>
-          </li>
-          <li class="overlay">
-            <a href="#0" class="card_type_picture lots__card-list-item">
-              <h2 class="card__title">Фильм режиссёра, который бросил киношколу</h2>
-              <p class="card__text">
-                Ну действительно, там линия, тут кружочек, а здесь и вовсе что-то похожее на инфузорию-туфельку. 
-                Никаких полей, лесов, котиков... Сколько бы вы на такое поставили, если бы не знали, что это — одна из революционных работ Кандинского?
-              </p>
-            </a>
-          </li>
+            <li>
+              <a href="#0" class="card-link">
+                <article class="card_type_book card">
+                  <div class="overlay card"></div>
+                  <div class="card_type_book lots__card-text-position">
+                    <h2 class="card__title">Книга, где описан один скучный день из жизни рекламного агента</h2>
+                    <p class="card__text">Объёмом почти в тысячу страниц. Иногда без знаков препинания и с переходами на древнеанглийский. 
+                      В ней одновременно рассказывается о 16 июня 1904 года и об истории литературы, начиная с античных времён. 
+                      И это всё накладывается на эпическую поэму Гомера. Сколько бы вы поставили на «Улисса» Джеймса Джойса?
+                    </p>
+                  </div>
+              </article>
+              </a>
+            </li>
+            <li>
+                <a href="#0" class="card-link">
+                  <article class="card">
+                  <div class="overlay card"></div>
+                  <div class="card_type_picture lots__card-text-position">
+                    <h2 class="card__title">Картина, которую повторит даже 5-летний сын маминой подруги</h2>
+                    <p class="card__text">
+                      Ну действительно, там линия, тут кружочек, а здесь и вовсе что-то похожее на инфузорию-туфельку. 
+                      Никаких полей, лесов, котиков... Сколько бы вы на такое поставили, если бы не знали, что это — одна из революционных работ Кандинского?
+                    </p>
+                  </div>
+                </article>
+                </a>
+            </li>
         </ul>
-        <a href="#0">посмотреть больше</a>
+        <a href="#0" class="lots__look-more-link">посмотреть больше</a>
       </article>
-      <article>
-
+      <article class="about">
+        <div class="about__logo-image">
+          <img src="/images/logo-white.svg" class="about__logo">
+        </div>
+        <h2 class="about__title">Об аукционе</h2>
+          <p class="about__text">
+            Здесь вы не встретите очередное пафосное собрание невероятно дорогого антиквариата. 
+            Наши лоты вообще не должны были попасть ни на один аукцион. 
+            Потому что кому нужен дневник девочки-подростка или картина, которую может нарисовать даже ребёнок? Кому нужны все эти странные вещи, созданные любителями?
+          </p>
+          <p class="about__text">
+            Слишком сложные или, наоборот, слишком простые. Опережающие своё время. 
+            В пух и прах растерзанные критиками. Непринятые и непонятые. 
+            Когда-то они казались просто неудачными. 
+            Но, несмотряна критику, кажущуюся простоту или сложность, сейчас без этих лотов невозможно представить современную культуру. Когда в эти вещи не верил никто, продолжали верить их создатели. 
+            И сейчас эти лоты стали культовыми. 
+          </p>
       </article>
     </main>
-    <footer>
-
+    <footer class="footer">
+      <div class="header__address">
+        <p class="address">+9 999 555 5555</p>
+        <p class="address">info@sobaka.ge</p>
+        <p>наб. Принсенграхт 263- 265, Амстердам</p>
+      </div>
+      <nav>
+        <ul class="footer__menu">
+          <li class="header__links-list-item_no-bullit">
+            <a class="header__links-list-item" href="#0">главная</a>
+          </li>
+          <li class="header__links-list-item">
+            <a class="header__links-list-item" href="#0">посмотреть лоты</a>
+          </li>
+          <li class="header__links-list-item">
+            <a href="#0">об аукционе</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="footer__social-list">
+        <a href="#0">
+          <img src="/images/yt.svg" alt="ссылка для перехода на ютуб" class="footer__social-list-item">
+        </a>
+        <a href="#0">
+          <img src="/images/vk.svg" alt="ссылка для перехода в вк" class="footer__social-list-item">
+        </a>
+        <a href="#0">
+          <img src="/images/pinterest.svg" alt="ссылка для перехода на пинтерест" class="footer__social-list-item">
+        </a>
+      </div>
     </footer>
   </body>
 </html>
